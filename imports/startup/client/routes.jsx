@@ -1,14 +1,16 @@
 import React from 'react';
-import { Router, Route, browserHistory } from 'react-router';
+import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 
-import AppContainer from '../../ui/containers/AppContainer.jsx';
-import QcForms from '../../ui/pages/QcForms.jsx';
-import NotFoundPage from '../../ui/pages/NotFoundPage.jsx';
+import AppContainer from '/imports/ui/containers/AppContainer.jsx';
+import Dashboard from '/imports/ui/pages/Dashboard.jsx';
+import Forms from '/imports/ui/pages/Forms.jsx';
+import NotFoundPage from '/imports/ui/pages/NotFoundPage.jsx';
 
 export const renderRoutes = () => (
     <Router history={browserHistory}>
         <Route path="/" component={AppContainer}>
-            <Route path="qcforms" component={QcForms} />
+            <IndexRoute component={Dashboard} />
+            <Route path="forms" component={Forms} />
             <Route path="*" component={NotFoundPage} />
         </Route>
     </Router>
