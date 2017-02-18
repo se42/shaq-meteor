@@ -1,0 +1,22 @@
+// MATERIALIZE CUSTOMIZATIONS
+$primary-color: #3F51B5;
+$primary-color-light: lighten($primary-color, 15%);
+$primary-color-dark: darken($primary-color, 15%);
+
+$secondary-color: #8C9EFF;
+$success-color: #4CAF50;
+$error-color: #F44336;
+$link-color: $secondary-color;
+
+$roboto-font-path: "/packages/materialize_materialize/fonts/roboto/";
+
+@import '{materialize:materialize}/sass/materialize.scss';
+
+// GLOBAL STYLESHEETS
+
+// LAYOUTS
+
+// PAGES
+
+// COMPONENTS
+@import '{}/imports/ui/components/NavMenu.scss';
