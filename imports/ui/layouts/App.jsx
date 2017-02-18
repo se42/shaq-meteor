@@ -5,13 +5,11 @@ import NavMenu from '../components/NavMenu.jsx';
 
 export default class App extends React.Component {
     render() {
-        const { secretMessage } = this.props;
         return(
-            <div id="app-container">
+            <div>
                 <NavMenu />
-                <div id="content-container" className="some-bullshit-class">
-                    <p>Hello, React!</p>
-                    <p>{secretMessage}</p>
+                <div className="container">
+                    <p>{this.props.children ? this.props.children : 'Hello, world!'}</p>
                 </div>
             </div>
         );

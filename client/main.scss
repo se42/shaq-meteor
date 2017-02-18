@@ -1,18 +1,11 @@
 // MATERIALIZE CUSTOMIZATIONS
-$primary-color: #ff5722;
+$primary-color: #3F51B5;
 $primary-color-light: lighten($primary-color, 15%);
-$primary-color-lighter: lighten($primary-color, 40%);
 $primary-color-dark: darken($primary-color, 15%);
-$primary-color-darker: darken($primary-color, 40%);
 
-$secondary-color: #186bbd;
-$secondary-color-light: lighten($secondary-color, 15%);
-$secondary-color-lighter: lighten($secondary-color, 40%);
-$secondary-color-dark: darken($secondary-color, 15%);
-$secondary-color-darker: darken($secondary-color, 40%);
-
-$success-color: #034732;
-$error-color: #E3170A;
+$secondary-color: #8C9EFF;
+$success-color: #4CAF50;
+$error-color: #F44336;
 $link-color: $secondary-color;
 
 $roboto-font-path: "/packages/materialize_materialize/fonts/roboto/";
@@ -26,3 +19,4 @@ $roboto-font-path: "/packages/materialize_materialize/fonts/roboto/";
 // PAGES
 
 // COMPONENTS
+@import '{}/imports/ui/components/NavMenu.scss';
