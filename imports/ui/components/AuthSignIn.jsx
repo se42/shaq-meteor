@@ -12,7 +12,6 @@ export default class AuthSignIn extends Component {
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-        console.log(this.props.router);
     }
 
     handleChange(event) {
@@ -31,9 +30,7 @@ export default class AuthSignIn extends Component {
         const router = this.props.router;
         const next = this.props.location.query.next;
         Meteor.loginWithPassword({username: username}, password, (err) => {
-            if (err) {
-                console.log(err);
-            } else {
+            if (!err) {
                 router.replace(next);
             }
         });
@@ -67,6 +64,9 @@ export default class AuthSignIn extends Component {
                                 <button type="submit" className="waves-effect waves-light btn">
                                     Sign In
                                 </button>
+                            </div>
+                            <div className="row center-align">
+                                <Link to={'/join?next=' + next}>No account? Sign Up!</Link>
                             </div>
                         </form>
                     </div>

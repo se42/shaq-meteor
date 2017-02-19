@@ -7,12 +7,12 @@ import AppLayout from '../layouts/AppLayout.jsx';
 
 AppContainer = createContainer(() => {
     return {
-        /* App props here */
+        meteorUser: Meteor.user(),
     };
 }, AppLayout);
 
 class AuthenticatedApp extends Component {
-    componentDidMount() {
+    componentWillMount() {
         const loggedInUser = this.props.loggedInUser;
         if (!loggedInUser) {
             const router = this.props.router;
