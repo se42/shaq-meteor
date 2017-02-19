@@ -20,8 +20,8 @@ export default class NavMenu extends Component {
                     <ul className="side-nav" id="slide-out-nav">
                         <li><h4 className="side-nav-header">SHAQ</h4></li>
                         <li><hr/></li>
-                        <li><Link to='/'>Home</Link></li>
-                        <li><Link to='/forms'>Forms</Link></li>
+                        <li><Link to='/app'>App Home</Link></li>
+                        <li><Link to='/app/forms'>Forms</Link></li>
                     </ul>
                 </div>
             </nav>

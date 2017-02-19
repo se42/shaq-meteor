@@ -1,9 +1,9 @@
 // MATERIALIZE CUSTOMIZATIONS
-$primary-color: #3F51B5;
+$primary-color: #03A9F4;
 $primary-color-light: lighten($primary-color, 15%);
 $primary-color-dark: darken($primary-color, 15%);
 
-$secondary-color: #8C9EFF;
+$secondary-color: #FF9100;
 $success-color: #4CAF50;
 $error-color: #F44336;
 $link-color: $secondary-color;
@@ -15,6 +15,7 @@ $roboto-font-path: "/packages/materialize_materialize/fonts/roboto/";
 // GLOBAL STYLESHEETS
 
 // LAYOUTS
+@import '{}/imports/ui/layouts/AuthLayout.scss';
 
 // PAGES
 

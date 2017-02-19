@@ -21,3 +21,4 @@ underscore@1.0.10
 react-meteor-data
 materialize:materialize
 fourseven:scss
+accounts-password

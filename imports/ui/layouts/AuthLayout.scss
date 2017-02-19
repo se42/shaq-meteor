@@ -1,0 +1,18 @@
+.auth-body {
+    background-color: $primary-color;
+    padding-top: 50px;
+}
+
+.auth-card {
+    margin: auto;
+
+    @media (min-width: 300px) {
+        width: 280px;
+    }
+    @media (min-width: 380px) {
+        width: 340px;
+    }
+    @media (min-width: 440px) {
+        width: 400px;
+    }
+}

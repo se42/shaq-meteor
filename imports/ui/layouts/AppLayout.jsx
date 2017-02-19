@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { Meteor } from 'meteor/meteor';
-
 import NavMenu from '/imports/ui/components/NavMenu.jsx';
 
-export default class App extends Component {
+export default class AppLayout extends Component {
     render() {
+        console.log('user is: ' + this.props.meteorUser);
         return(
             <div>
                 <NavMenu />
