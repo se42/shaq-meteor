@@ -3,8 +3,7 @@ import NavMenu from '/imports/ui/components/NavMenu.jsx';
 
 export default class AppLayout extends Component {
     render() {
-        console.log('user is: ' + this.props.meteorUser);
-        return(
+        return (
             <div>
                 <NavMenu />
                 <div className="container">
