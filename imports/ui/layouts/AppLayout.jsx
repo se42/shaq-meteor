@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import { Meteor } from 'meteor/meteor';
-
+import { browserHistory } from 'react-router';
 import NavMenu from '/imports/ui/components/NavMenu.jsx';
 
-export default class App extends Component {
+export default class AppLayout extends Component {
     render() {
-        return(
+        const user = this.props.meteorUser;
+        const username = user ? user.username : 'nobody';
+        return (
             <div>
-                <NavMenu />
+                <NavMenu username={username} />
                 <div className="container">
                     {this.props.children}
                 </div>
