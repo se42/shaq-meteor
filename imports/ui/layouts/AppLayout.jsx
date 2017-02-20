@@ -8,7 +8,7 @@ export default class AppLayout extends Component {
         const username = user ? user.username : 'nobody';
         return (
             <div>
-                <NavMenu username={username} />
+                <NavMenu username={username} isLoggedIntoApp={true}/>
                 <div className="container">
                     {this.props.children}
                 </div>
