@@ -5,8 +5,8 @@ import PublicPage from '/imports/ui/pages/PublicPage.jsx';
 import AuthenticatedApp from '/imports/ui/containers/AppContainer.jsx';
 import Dashboard from '/imports/ui/pages/Dashboard.jsx';
 import Forms from '/imports/ui/pages/Forms.jsx';
-import AuthSignIn from '/imports/ui/components/AuthSignIn.jsx';
-import AuthJoin from '/imports/ui/components/AuthJoin.jsx';
+import AuthSignIn from '/imports/ui/pages/AuthSignIn.jsx';
+import AuthJoin from '/imports/ui/pages/AuthJoin.jsx';
 import NotFoundPage from '/imports/ui/pages/NotFoundPage.jsx';
 
 export const renderRoutes = () => (
