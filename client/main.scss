@@ -1,7 +1,7 @@
 // MATERIALIZE CUSTOMIZATIONS
 $primary-color: #03A9F4;
 $primary-color-light: lighten($primary-color, 15%);
-$primary-color-dark: darken($primary-color, 15%);
+$primary-color-dark: darken($primary-color, 20%);
 
 $secondary-color: #FF9100;
 $success-color: #4CAF50;
@@ -13,11 +13,13 @@ $roboto-font-path: "/packages/materialize_materialize/fonts/roboto/";
 @import '{materialize:materialize}/sass/materialize.scss';
 
 // GLOBAL STYLESHEETS
+@import '{}/imports/ui/stylesheets/global.scss';
 
 // LAYOUTS
 @import '{}/imports/ui/layouts/AuthLayout.scss';
 
 // PAGES
+@import '{}/imports/ui/pages/PublicPage.scss';
 
 // COMPONENTS
 @import '{}/imports/ui/components/NavMenu.scss';

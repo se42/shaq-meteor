@@ -4,6 +4,11 @@ import { Link, browserHistory } from 'react-router';
 import { $ } from 'meteor/jquery';
 
 export default class NavMenu extends Component {
+    constructor(props) {
+        super(props);
+        this.loggedInNavMenu = this.loggedInNavMenu.bind(this);
+        this.loggedOutNavMenu = this.loggedOutNavMenu.bind(this);
+    }
     componentDidMount() {
         $(".button-collapse").sideNav({closeOnClick: true});
     }
@@ -14,7 +19,7 @@ export default class NavMenu extends Component {
         Meteor.logout();
     }
 
-    render() {
+    loggedInNavMenu() {
         const username = this.props.username;
         const logout = this.props.logout;
         return(
@@ -41,5 +46,30 @@ export default class NavMenu extends Component {
                 </div>
             </nav>
         );
+    }
+
+    loggedOutNavMenu() {
+        return (
+            <div className="navbar-fixed">
+            <nav>
+                <div className="nav-wrapper">
+                    <a href="#" className="brand-logo left">SHAQ</a>
+                    <ul id="nav-mobile" className="right">
+                        <li>
+                            <Link to="/app"
+                                className="waves-effect waves-light btn">
+                                Go To App
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            </div>
+        );
+    }
+
+    render() {
+        const isLoggedIntoApp = this.props.isLoggedIntoApp;
+        return (isLoggedIntoApp ? this.loggedInNavMenu() : this.loggedOutNavMenu());
     }
 }

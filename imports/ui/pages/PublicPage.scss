@@ -1,0 +1,44 @@
+.public-page {
+
+    h1, h2, h3, h4, h5, h6 {
+        color: $primary-color-dark;
+    }
+
+    div.divider {
+        background-color: $primary-color;
+    }
+}
+
+.public-page-header {
+    h1, h6 {
+        display: inline;
+    }
+}
+
+.technology-img {
+    padding: 20px;
+    width: 250px;
+    height: 250px;
+}
+
+.meteor-logo {
+    background-color: #2b2e39;
+}
+
+.react-logo {
+    background-color: #222222;
+}
+
+.materialize-logo-container {
+    background-color: #fbe2e3;
+}
+
+#materialize-logo {
+    margin: 92px auto;
+    width: 82px;
+    height: 66px;
+}
+
+.logo-credits {
+    font-size: smaller;
+}
