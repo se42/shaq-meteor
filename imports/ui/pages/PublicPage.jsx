@@ -90,7 +90,7 @@ export default class PublicPage extends Component {
                                     <div className="card-content">
                                         <span className="card-title activator">
                                             Meteor
-                                            <i className="material-icons right">info</i>
+                                            <i className="material-icons right info-icon">info</i>
                                         </span>
                                     </div>
                                     <div className="card-reveal">
@@ -125,7 +125,7 @@ export default class PublicPage extends Component {
                                     <div className="card-content">
                                         <span className="card-title activator">
                                             React
-                                            <i className="material-icons right">info</i>
+                                            <i className="material-icons right info-icon">info</i>
                                         </span>
                                     </div>
                                     <div className="card-reveal">
@@ -158,7 +158,7 @@ export default class PublicPage extends Component {
                                     <div className="card-content">
                                         <span className="card-title activator">
                                             Materialize CSS
-                                            <i className="material-icons right">info</i>
+                                            <i className="material-icons right info-icon">info</i>
                                         </span>
                                     </div>
                                     <div className="card-reveal">
