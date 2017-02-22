@@ -22,3 +22,4 @@ react-meteor-data
 materialize:materialize
 fourseven:scss
 accounts-password
+se42:logger

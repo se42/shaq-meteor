@@ -157,13 +157,13 @@ export default class PublicPage extends Component {
                                     </div>
                                     <div className="card-content">
                                         <span className="card-title activator">
-                                            Materialize CSS
+                                            Materialize
                                             <i className="material-icons right info-icon">info</i>
                                         </span>
                                     </div>
                                     <div className="card-reveal">
                                         <span className="card-title">
-                                            Materialize CSS
+                                            Materialize
                                             <i className="material-icons right">close</i>
                                         </span>
                                         <p>
