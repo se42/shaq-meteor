@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
-import { $ } from 'meteor/jquery';
+import FormsContainer from '../containers/FormsContainer.jsx';
 
-export default class Forms extends Component {
+class Forms extends Component {
     render() {
         const forms = this.props.forms;
         const displayForms = forms.map((form) => {
             const {_id, formId, title} = form;
             return (
                 <div key={_id} className="col s12 m4 l3">
-                    <Link to="#" className="form-card">
+                    <Link to={'/app/forms/' + _id} className="form-card">
                         <div className="card">
                             <div className="card-content">
                                 <span className="card-title">{formId}</span>
@@ -18,7 +18,7 @@ export default class Forms extends Component {
                         </div>
                     </Link>
                 </div>
-            )
+            );
         });
 
         return (
@@ -27,7 +27,12 @@ export default class Forms extends Component {
                 <div className="row">
                     {displayForms}
                 </div>
+                <Link to="/app/forms/new" className="btn-floating btn-large waves-effect waves-light">
+                    <i className="material-icons">add</i>
+                </Link>
             </div>
-        )
+        );
     }
 }
+
+export default FormsContainer(Forms);
