@@ -27,9 +27,11 @@ class Forms extends Component {
                 <div className="row">
                     {displayForms}
                 </div>
-                <Link to="/app/forms/new" className="btn-floating btn-large waves-effect waves-light">
-                    <i className="material-icons">add</i>
-                </Link>
+                <div className="fixed-action-btn">
+                    <Link to="/app/forms/new" className="btn-floating btn-large waves-effect waves-light">
+                        <i className="material-icons">add</i>
+                    </Link>
+                </div>
             </div>
         );
     }

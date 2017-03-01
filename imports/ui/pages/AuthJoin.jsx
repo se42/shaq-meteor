@@ -1,6 +1,5 @@
 import { Accounts } from 'meteor/accounts-base';
 import React, { Component } from 'react';
-import { Link, browserHistory } from 'react-router';
 import AuthLayout from '../layouts/AuthLayout.jsx';
 import { $ } from 'meteor/jquery';
 
@@ -12,7 +11,7 @@ export default class AuthJoin extends Component {
             password: '',
             passwordConfirm: '',
             error: '',
-        }
+        };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -30,30 +29,30 @@ export default class AuthJoin extends Component {
         const isPasswordConfirmed = password === passwordConfirm;
 
         if (isUsernameValid) {
-            $("[name='username']").addClass('valid');
-            $("[name='username']").removeClass('invalid');
+            $("[name='username']").addClass("valid");
+            $("[name='username']").removeClass("invalid");
         } else {
-            $("[name='username']").addClass('invalid');
-            $("[name='username']").removeClass('valid');
+            $("[name='username']").addClass("invalid");
+            $("[name='username']").removeClass("valid");
         }
         if (isPasswordValid) {
-            $("[name='password']").addClass('valid');
-            $("[name='password']").removeClass('invalid');
+            $("[name='password']").addClass("valid");
+            $("[name='password']").removeClass("invalid");
         } else {
-            $("[name='password']").addClass('invalid');
-            $("[name='password']").removeClass('valid');
+            $("[name='password']").addClass("invalid");
+            $("[name='password']").removeClass("valid");
         }
         if (isPasswordConfirmed) {
-            $("[name='passwordConfirm']").addClass('valid');
-            $("[name='passwordConfirm']").removeClass('invalid');
+            $("[name='passwordConfirm']").addClass("valid");
+            $("[name='passwordConfirm']").removeClass("invalid");
         } else {
-            $("[name='passwordConfirm']").addClass('invalid');
-            $("[name='passwordConfirm']").removeClass('valid');
+            $("[name='passwordConfirm']").addClass("invalid");
+            $("[name='passwordConfirm']").removeClass("valid");
         }
         if (isUsernameValid && isPasswordValid && isPasswordConfirmed) {
-            $('#create-account-btn').prop('disabled', false);
+            $("#create-account-btn").prop("disabled", false);
         } else {
-            $('#create-account-btn').prop('disabled', true);
+            $("#create-account-btn").prop("disabled", true);
         }
 
         this.setState({
@@ -71,7 +70,7 @@ export default class AuthJoin extends Component {
             if (err) {
                 this.setState({
                     error: err.reason,
-                })
+                });
             } else {
                 router.replace(next);
             }
@@ -79,7 +78,6 @@ export default class AuthJoin extends Component {
     }
 
     render() {
-        const next = this.props.location.query.next;
         return (
             <AuthLayout>
                 <div className="card-content">

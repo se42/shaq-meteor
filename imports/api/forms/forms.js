@@ -34,7 +34,7 @@ const FormFieldSchema = new SimpleSchema({
 });
 
 
-const FormSchema = new SimpleSchema({
+export const FormSchema = new SimpleSchema({
     formId: String,
     title:  String,
     fields: {
